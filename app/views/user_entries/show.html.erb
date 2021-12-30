@@ -1,0 +1,33 @@
+
+<p>
+  <strong>Meal type:</strong>
+  <%= @user_entry.meal_type %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @user_entry.calories %>
+</p>
+
+<p>
+  <strong>Proteins:</strong>
+  <%= @user_entry.proteins %>
+</p>
+
+<p>
+  <strong>Carbohydrates:</strong>
+  <%= @user_entry.carbohydrates %>
+</p>
+
+<p>
+  <strong>Fats:</strong>
+  <%= @user_entry.fats %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @user_entry.integer %>
+</p>
+
+<%= link_to 'Edit', edit_user_entry_path(@user_entry) %> |
+<%= link_to 'Back', user_entries_path %>
