@@ -7,7 +7,7 @@
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title"><%= user_entry.meal_type %></p>
+          <p class="card-header-title"><%= user_entry.meal_type %> : <%= user_entry.category.title if user_entry.category.present? %></p>
         </header>
         <div class="card-content">
           <div class="content">

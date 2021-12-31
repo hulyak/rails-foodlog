@@ -2,12 +2,12 @@
   <% if @user_entry.errors.any? %>
     <div class="message is-danger">
       <div class="message-header">
-        <h2><%= pluralize(user_entry.errors.count, "error") %> prohibited this user_entry from being saved:</h2>
+        <h2><%= pluralize(@user_entry.errors.count, "error") %> prohibited this user_entry from being saved:</h2>
       </div>
 
       <div class="message-body">
         <ul>
-          <% user_entry.errors.each do |error| %>
+          <% @user_entry.errors.each do |error| %>
             <li><%= error.full_message %></li>
           <% end %>
         </ul>
