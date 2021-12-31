@@ -3,7 +3,7 @@ class UserEntriesController < ApplicationController
 
   # GET /user_entries or /user_entries.json
   def index
-    @user_entries = UserEntry.all
+    @user_entries = UserEntry.where("created_at >= ?", Date.today)
   end
 
   # GET /user_entries/1 or /user_entries/1.json
