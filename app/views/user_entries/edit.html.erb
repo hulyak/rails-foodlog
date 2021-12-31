@@ -1,6 +1,6 @@
-<h1>Editing User Entry</h1>
-
-<%= render 'form', user_entry: @user_entry %>
-
-<%= link_to 'Show', @user_entry %> |
-<%= link_to 'Back', user_entries_path %>
+<div class="columns is-centered mt-6">
+  <div class="column is-one-third">
+    <h1 class="is-size-3 has-text-weight-bold mb-3">Editing entry</h1>
+    <%= render 'form', entry: @user_entry %>
+  </div>
+</div>

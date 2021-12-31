@@ -1,33 +1,43 @@
+<% content_for :title do %>
+  <%= @user_entry.meal_type %> &ndash; <%= DateTime.now.to_s(:nice_date) %>
+<% end %>
 
-<p>
-  <strong>Meal type:</strong>
-  <%= @user_entry.meal_type %>
-</p>
+<div class="columns mt-6 is-centered">
+  <div class="column is-one-third">
+    <nav class="panel is-link">
+      <p class="panel-heading">
+        <%= @user_entry.meal_type %>
+      </p>
 
-<p>
-  <strong>Calories:</strong>
-  <%= @user_entry.calories %>
-</p>
+      <div class="panel-block">
+        Calories: <%= @user_entry.calories %>
+      </div>
 
-<p>
-  <strong>Proteins:</strong>
-  <%= @user_entry.proteins %>
-</p>
+      <div class="panel-block">
+        Proteins: <%= @user_entry.proteins %>
+      </div>
 
-<p>
-  <strong>Carbohydrates:</strong>
-  <%= @user_entry.carbohydrates %>
-</p>
+      <div class="panel-block">
+        Carbohydrates: <%= @user_entry.carbohydrates %>
+      </div>
 
-<p>
-  <strong>Fats:</strong>
-  <%= @user_entry.fats %>
-</p>
+      <div class="panel-block">
+        Fats: <%= @user_entry.fats %>
+      </div>
+    </nav>
 
-<p>
-  <strong>Integer:</strong>
-  <%= @user_entry.integer %>
-</p>
+    <div class="columns is-mobile">
+      <div class="column">
+        <%= link_to "Edit", edit_user_entry_path(@user_entry), class: "button is-gray" %>
+        <%= link_to "Delete", user_entry_path(@user_entry), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-gray" %>
+        <%= link_to 'Back', user_entries_path, class: "button is-gray" %>
+      </div>
+      <div class="column">
+        <!-- -->
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_user_entry_path(@user_entry) %> |
-<%= link_to 'Back', user_entries_path %>
+
+
