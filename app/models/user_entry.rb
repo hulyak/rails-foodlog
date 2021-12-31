@@ -1,4 +1,5 @@
 class UserEntry < ApplicationRecord
+	belongs_to :category
 	validates :calories, :proteins, :carbohydrates, :fats, :meal_type, :category_id, presence: true
 
 	def day

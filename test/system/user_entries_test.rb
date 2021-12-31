@@ -33,7 +33,6 @@ class UserEntriesTest < ApplicationSystemTestCase
     fill_in "Calories", with: @user_entry.calories
     fill_in "Carbohydrates", with: @user_entry.carbohydrates
     fill_in "Fats", with: @user_entry.fats
-    fill_in "Integer", with: @user_entry.integer
     fill_in "Meal type", with: @user_entry.meal_type
     fill_in "Proteins", with: @user_entry.proteins
     click_on "Update User entry"
